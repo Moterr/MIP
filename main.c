@@ -8,7 +8,7 @@ void n(char *pole){
     int i;
     char zn;
     i=0;
-    if((znaky = fopen("sifra.txt","r"))==NULL){
+    if((znaky = fopen("sifra.txt","r"))==NULL){			//naèítanie do pola
         printf("Spravu sa nepodarilo nacitat");
     }
     else{
@@ -23,17 +23,17 @@ void n(char *pole){
 void v(char *pole){
     int i;
     for(i=0;i<strlen(pole);i++){
-    	printf("%c",pole[i]);
+    	printf("%c",pole[i]);					//výpis pola
     if(i==strlen(pole)-1){
     	printf("\n");}
     }
 }
 
-void u(char *pole,char *upravene_pole){
+void u(char *pole,char *upravene_pole){			//úprava pola
     int i;
     char pism;
     for(i=0;i<MAX;i++){
-    if  (pole[i]>='a' && pole[i]<='z'){
+    if  (pole[i]>='a' && pole[i]<='z'){			
         pism=pole[i];
         pism=pism+32;
         upravene_pole[i]=pism;
@@ -45,7 +45,7 @@ void u(char *pole,char *upravene_pole){
     }
     }
 }
-void s(char *upravene_pole){
+void s(char *upravene_pole){		//výpis upraveneho pola
     int i,k;
     for(i=0;i<MAX;i++){
         if(upravene_pole[i]!=' '){
@@ -57,7 +57,7 @@ void s(char *upravene_pole){
     }
 }
 
-void d(char *pole){
+void d(char *pole){						//odstranenie medzier a nepísmenkových znakov
     int i,k,j;
     char pdoc[10],zn;
     FILE *znaky;
@@ -80,7 +80,7 @@ void d(char *pole){
     }
 
 }
-void p(char *pole){
+void p(char *pole){						//spoèítanie velkých a malych pismen
     int i,m,v;
     m=0;
     v=0;
@@ -100,7 +100,7 @@ void p(char *pole){
     }
 }
 
-void z(char *pole){
+void z(char *pole){							
     int z,k,i,j;
     scanf(" %d %d\n",&z,&k);
     if (strlen(pole)!=0 && z<k){
