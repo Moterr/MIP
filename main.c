@@ -192,7 +192,7 @@ int main()
             z(pole);
             break;
         case 'b' :
-            b();
+            b(caesar);
             break;
 
         }
